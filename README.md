@@ -40,7 +40,22 @@ To grant public read access, apply the following policy:
 - Point the record to the S3 website endpoint (US East N. Virginia).
 - Use a Simple routing policy for efficient domain resolution.
 
-### 5. Set up a CI/CD pipeline to automatically deploy your GitHub repository to an AWS S3 bucket
+### 5. Setting up a CI/CD pipeline to automatically deploy your GitHub repository to an AWS S3 bucket
+
+- Set Up OIDC Authentication for GitHub Actions
+    - Create an IAM Role for GitHub Actions
+    - Attach an S3 Access Policy
+    - Add a Trust Policy for GitHub
+- Use IAM Role in GitHub Actions Workflow
+
+#### ✅ Benefits of Using OIDC for GitHub Actions
+
+✔ **No long-term AWS access keys** stored in GitHub.  
+✔ **More secure** than hardcoded credentials.  
+✔ **GitHub Actions dynamically assumes the IAM role** when needed.  
+✔ **Follows AWS security best practices** (least privilege principle).
+
+
 ## Technologies Used
 
 - **Amazon S3**: Secure, scalable object storage for static website hosting.
