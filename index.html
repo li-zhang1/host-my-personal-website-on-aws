@@ -519,9 +519,11 @@
                 </h3>
                 <p class="portfolio__description">
                   1. Designed and developed a responsive personal portfolio website using HTML5, CSS3, and modern web development practices.<br>
-                  2. Architected and implemented cloud hosting infrastructure using AWS S3 static website hosting and Route 53 for domain management.<br>
-                  3. Configured S3 bucket policies and permissions following AWS security best practices to ensure secure content delivery.<br>
-                  4. Created CloudFront and enabled encryption in transite for best security practices.(Enhanced)
+                  2. Architected and implemented cloud hosting infrastructure using AWS S3, CloudFront and Route 53 for domain management.<br>
+                  3. Configured Amazon CloudFront with AWS Certificate Manager (ACM) to implement encryption in transit, ensuring adherence to security best practices.<br>
+                  4. Created and managed DNS record sets in Amazon Route 53 for efficient domain routing and availability.<br>
+                  5. Designed and implemented a CI/CD pipeline to automate code deployment from GitHub to an Amazon S3 bucket, enhancing deployment efficiency and reliability.<br>
+                  6. Implemented OIDC-based authentication to securely integrate GitHub with AWS, enabling seamless and credential-free access.
                 </p>
                 <a
                   href="https://github.com/li-zhang1/host-my-personal-website-on-aws"
@@ -533,7 +535,36 @@
                 </a>
               </div>
             </div>
+
             <!-- ------------------------portfollio 2-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/project3.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                  Host a Dynamic Website on AWS with Terraform
+                </h3>
+                <p class="portfolio__description">
+                  1. Used Terraform to deploy and manage a dynamic website on AWS.<br>
+                  2. Configured a custom VPC with both public and private subnets across two Availability Zones for High Availability and Fault Tolerance.<br>
+                  3. Established Security Groups to function as network firewalls, , restricting inbound and outbound traffic.<br>
+                  4. Hosted the website on EC2 Instances and Amazon RDS for MySQL within Private Subnets for enhanced security.<br>
+                  5. Utilized an Application Load Balancer (ALB) and a target group to distribute traffic efficiently to an Auto Scaling Group.<br>
+                  6. Configure the necessary DNS records in Route 53.<br>
+                  7. Secured application communications using AWS Certificate Manager (ACM).
+                </p>
+                <a
+                  href="https://github.com/li-zhang1/Host-a-Dynamic-Web-App-on-AWS"
+                  class="button button--flex button--small portfolio__button"
+                  target="_blank"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ------------------------portfollio 3-------------------- -->
 
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/Project2.png" class="portfolio__img" />
@@ -567,33 +598,6 @@
               </div>
             </div>
 
-            <!-- ------------------------portfollio 3-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/project3.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Host a Dynamic Website on AWS with Terraform
-                </h3>
-                <p class="portfolio__description">
-                  1. Used Terraform to deploy and manage a dynamic website on AWS.<br>
-                  2. Configured a custom VPC with both public and private subnets across two Availability Zones for High Availability and Fault Tolerance.<br>
-                  3. Established Security Groups to function as network firewalls, , restricting inbound and outbound traffic.<br>
-                  4. Hosted the website on EC2 Instances and Amazon RDS for MySQL within Private Subnets for enhanced security.<br>
-                  5. Utilized an Application Load Balancer (ALB) and a target group to distribute traffic efficiently to an Auto Scaling Group.<br>
-                  6. Configure the necessary DNS records in Route 53.<br>
-                  7. Secured application communications using AWS Certificate Manager (ACM).
-                </p>
-                <a
-                  href="https://github.com/li-zhang1/Host-a-Dynamic-Web-App-on-AWS"
-                  class="button button--flex button--small portfolio__button"
-                  target="_blank"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
             
           </div>
 
