@@ -1,4 +1,4 @@
-document.getElementById("contactForm").addEventListener("Send", async function(event) {
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
 
@@ -15,9 +15,17 @@ document.getElementById("contactForm").addEventListener("Send", async function(e
             body: JSON.stringify(formData)
         });
 
-        const result = await response.json();
-        responseMessage.textContent = result.message || "Error sending email";
-    } catch (error) {
-        responseMessage.textContent = "An error occurred!";
-    }
+        // Handle the response from the API
+        if (response.ok) {
+        const responseData = await response.json();
+        alert('Your message has been sent successfully!'); // Show a success message
+        console.log(responseData);
+        } else {
+        alert('Something went wrong. Please try again.');
+        }
+        } catch (error) {
+         console.error('Error submitting form:', error);
+         alert('There was an error submitting your form.');
+}
+    
 });
