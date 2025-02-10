@@ -1,6 +1,6 @@
-
-document.getElementById("contactForm").addEventListener("Send", async function(event) {
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault();
+
 
     const formData = {
         name: document.getElementById("name").value,
@@ -8,15 +8,16 @@ document.getElementById("contactForm").addEventListener("Send", async function(e
         message: document.getElementById("message").value
     };
 
-    const response = await fetch("https://xtbdx23d21.execute-api.us-east-1.amazonaws.com/prod/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-    });
+    try {
+        const response = await fetch("https://xtbdx23d21.execute-api.us-east-1.amazonaws.com/prod/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
 
-    if (response.ok) {
-        alert("Message sent successfully!");
-    } else {
-        alert("Failed to send message.");
+        const result = await response.json();
+        responseMessage.textContent = result.message || "Error sending email";
+    } catch (error) {
+        responseMessage.textContent = "An error occurred!";
     }
 });
