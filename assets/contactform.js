@@ -1,5 +1,5 @@
 
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
+document.getElementById("contactForm").addEventListener("Send", async function(event) {
     event.preventDefault();
 
     const formData = {
