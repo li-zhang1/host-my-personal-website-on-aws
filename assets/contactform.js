@@ -1,6 +1,10 @@
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
+     // Disable the submit button to prevent multiple submissions
+     const submitButton = document.querySelector('button[type="submit"]');
+     submitButton.disabled = true;
+
 
     const formData = {
         name: document.getElementById("name").value,
@@ -22,10 +26,14 @@ document.getElementById("contactForm").addEventListener("submit", async function
         console.log(responseData);
         } else {
         alert('Something went wrong. Please try again.');
+        throw new Error('Failed to send the message');
         }
         } catch (error) {
          console.error('Error submitting form:', error);
          alert('There was an error submitting your form.');
-}
+        } finally {
+            // Re-enable the submit button after alert is closed
+            submitButton.disabled = false;
+        }
     
 });
