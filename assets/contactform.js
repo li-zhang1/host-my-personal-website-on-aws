@@ -24,6 +24,11 @@ document.getElementById("contactForm").addEventListener("submit", async function
         const responseData = await response.json();
         alert('Your message has been sent successfully!'); // Show a success message
         console.log(responseData);
+
+        // Empty the form fields after successful submission
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+        document.getElementById("name").value = '';
         } else {
         alert('Something went wrong. Please try again.');
         throw new Error('Failed to send the message');
