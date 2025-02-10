@@ -40,20 +40,6 @@ To grant public read access, apply the following policy:
 - Point the record to the S3 website endpoint (US East N. Virginia).
 - Use a Simple routing policy for efficient domain resolution.
 
-### 5. Setting up a CI/CD pipeline to automatically deploy your GitHub repository to an AWS S3 bucket
-
-- Set Up OIDC Authentication for GitHub Actions
-    - Create an IAM Role for GitHub Actions
-    - Attach an S3 Access Policy
-    - Add a Trust Policy for GitHub
-- Use IAM Role in GitHub Actions Workflow
-
-#### ✅ Benefits of Using OIDC for GitHub Actions
-
-✔ **No long-term AWS access keys** stored in GitHub.  
-✔ **More secure** than hardcoded credentials.  
-✔ **GitHub Actions dynamically assumes the IAM role** when needed.  
-✔ **Follows AWS security best practices** (least privilege principle).
 
 
 ## Technologies Used
@@ -63,9 +49,30 @@ To grant public read access, apply the following policy:
 - **HTML**: Defines the website’s structure and content.
 - **CSS**: Enhances styling and layout.
 - **JavaScript**: Implements interactive and dynamic functionalities.
+- **AWS Lambda**: Serverless compute service that runs code in response to events without requiring server management, automatically scaling based on demand.
+- **Amazon API Gateway**: Fully managed service that enables developers to create, publish, and manage APIs at any scale, acting as the "front door" for applications to access data or functionality.
+- **Amazon SES (Simple Email Service)**: Cloud-based email sending service designed to help digital marketers and application developers send marketing, notification, and transactional emails.
+- **Amazon DynamoDB**: Fully managed NoSQL database service that provides fast and predictable performance with seamless scalability, offering built-in security and backup recovery.
+- **OIDC (OpenID Connect)**: Identity layer built on top of the OAuth 2.0 protocol that allows clients to verify the identity of end-users based on the authentication performed by an authorization server.
+- **CI/CD (Continuous Integration/Continuous Deployment)**: Software development practice where code changes are automatically built, tested, and deployed to production, ensuring reliable and rapid delivery of applications.
 
 
-# Continuous Improvement
+## Continuous Improvement
+
+### Set up a CI/CD pipeline to automatically deploy your GitHub repository to an AWS S3 bucket
+
+- Set Up OIDC Authentication for GitHub Actions
+    - Create an IAM Role for GitHub Actions
+    - Attach an S3 Access Policy
+    - Add a Trust Policy for GitHub
+- Use IAM Role in GitHub Actions Workflow
+
+#### Benefits of Using OIDC for GitHub Actions
+
+✔ **No long-term AWS access keys** stored in GitHub.  
+✔ **More secure** than hardcoded credentials.  
+✔ **GitHub Actions dynamically assumes the IAM role** when needed.  
+✔ **Follows AWS security best practices** (least privilege principle).
 
 ### Add a Contact Form with AWS Lambda & API Gateway
 
