@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This repository contains the source code and assets for my personal portfolio website. Developed using HTML, CSS, and JavaScript, the site is hosted on AWS utilizing Amazon S3 and Route 53 for seamless scalability and reliability.
+This repository contains the source code and assets for my personal portfolio website. Developed using HTML, CSS, and JavaScript, the site is hosted on AWS utilizing Amazon S3 and CloudFront and Route 53 for seamless scalability and reliability.
 
 ## Deploying the Website on Amazon S3
 
@@ -45,6 +45,7 @@ To grant public read access, apply the following policy:
 ## Technologies Used
 
 - **Amazon S3**: Secure, scalable object storage for static website hosting.
+- **CloudFront**: Content delivery network (CDN) that securely delivers data, videos, applications, and APIs to users globally with low latency and high transfer speeds.
 - **Route 53**: A robust DNS service ensuring efficient domain name management.
 - **HTML**: Defines the website’s structure and content.
 - **CSS**: Enhances styling and layout.
